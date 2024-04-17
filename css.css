@@ -1,0 +1,379 @@
+#tulisan{
+    color: black;
+} 
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #333;
+    }
+
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background-color 0.5s;
+}
+
+
+.box{
+    position: relative;
+    display: flex;
+    background: #fff1c9;
+    height: 600px;
+    width: 500px;
+    border-radius: 40px 40px 0px 40px;
+    transition: all .33s;
+}
+
+.banner{
+    top: 15px;
+    left:15px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 215px;
+    width: 470px;
+    border-radius: 25px 25px 0px 0px;
+    overflow: hidden;
+    transition: all .33s;
+}
+
+.banner img {
+    display: flex;
+    width: 470px;
+    height: auto;
+    transition: all .33s;
+}
+
+.banner-hitbox {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 439.5px;
+    left: 67.5px;
+    width: 0px;
+    height: 0px;
+    overflow: hidden;
+    transition: all 1s;
+    border-radius: 50%;
+}
+
+.banner-gradient {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 200px;
+    left: 15px;
+    background: linear-gradient( rgba(255, 255, 255, 0.2), rgb(255, 255, 255));
+    height: 30px;
+    width: 470px;
+    transition: all .33s;
+}
+
+.banner:hover ~ .profile-bg, 
+.banner:hover ~ .profile, 
+.banner:hover ~ .content, 
+.banner:hover ~ .name, 
+.banner:hover ~ .banner-gradient {
+    opacity: 0;
+}
+
+.banner:hover ~ .banner-hitbox {
+    bottom: 429.5px;
+    left: 57.5px;
+    width: 115px;
+    height: 115px;
+    border-radius: 50%;
+}
+
+.banner:hover {
+    top: 0px;
+    left: 0px;
+    background: rgb(245, 245, 245);
+    height: 600px;
+    width: 500px;
+    border-radius: 40px 40px 0px 40px;
+    cursor: pointer;
+}
+
+
+.profile {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, .7);
+    top: 65px;
+    left: 65px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    opacity:1;
+    transition: all .33s;
+}
+
+.profile-bg {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, .7);
+    top: 57.5px;
+    left: 57.5px;
+    width: 115px;
+    height: 115px;
+    border-radius: 50%;
+    overflow: hidden;
+    opacity:1;
+    transition: all .33s;
+}
+
+
+.profile img {
+    display: flex;
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+    transition: all .33s;
+}
+
+.profile-hitbox {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 15px;
+    left: 200px;
+    width: 0px;
+    height: 200px;
+    transition: all 1s;
+}
+
+.profile:hover {
+    top: 0px;
+    left: 0px;
+    background: rgb(245, 245, 245);
+    height: 600px;
+    width: 500px;
+    border-radius: 40px 40px 0px 40px;
+    cursor: pointer;
+}
+
+.profile:hover img {
+    width: 375px;
+    height: auto;
+    border-radius: 0%;
+    opacity: 1;
+}
+
+.profile:hover ~ .profile-bg, 
+.profile:hover ~ .content, 
+.profile:hover ~ .name, 
+.profile:hover ~ .banner-gradient {
+    opacity: 0;
+}
+
+.profile:hover ~ .profile-hitbox {
+    width: 285px;
+}
+
+.name {
+    top: 65px;
+    left:215px;
+    pointer-events: none;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: rgb(245, 245, 245, .8);
+    height: 70px;
+    width: 220px;
+    border-radius: 15px;
+    padding: 10px;
+    transition: all .33s;
+}
+
+.content {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    bottom: 15px;
+    left: 15px;
+    background: #ffffff;
+    height: 355px;
+    width: 470px;
+    border-radius: 0px 0px 0px 25px;
+    transition: all .33s;
+}
+
+
+.divider {
+    position: absolute;
+    display: flex;
+    background: #d9a254;
+    left: 235px;
+    height: 85%;
+    width: 2px;
+    border-radius: 10px;
+    opacity: .8;
+    transition: all .33s;
+}
+
+.content-1, .content-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 355px;
+    width: 235px;
+    transition: all .33s;
+}
+
+.content-1-1, .content-1-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 177.5px;
+    width: 235px;
+    transition: all .33s;
+}
+
+.bio {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    position: relative;
+    flex-direction: column;
+    background: rgb(245, 245, 245, .8);
+    height: 100px;
+    width: 80%;
+    border-radius: 10px;
+    margin: 2.5px;
+    transition: all .33s;
+}
+
+.bio-title {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+    transition: all .33s;
+}
+
+.bio-icon {
+    display: flex;
+    height: 25px;
+    width: 25px;
+    margin: 5px;
+    transition: all .33s;
+}
+
+.bio-icon img{
+    width: 100%;
+    height: 100%;
+}
+
+.bio-title-divider {
+    display: flex;
+    background: #d9a254;
+    height: 2px;
+    width: 100%;
+    border-radius: 10px;
+    opacity: .8;
+    transition: all .33s;
+}
+
+.bio-content {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    height: 75%;
+    width: 100%;
+    transition: all .33s;
+}
+
+.table {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 150px;
+    transition: all .33s;
+}
+
+.table table, .table td {
+    
+  border: 2px solid #000000;
+  border-collapse: collapse;
+}
+
+.content-2 a {
+    text-decoration: none;
+}
+
+.link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    background: rgb(245, 245, 245, .8);
+    height: 40px;
+    width: 120px;
+    border-radius: 10px;
+    margin:15px;
+    padding: 5px;
+    transition: all .33s;
+}
+
+.link-icon {
+    position: absolute;
+    display: flex;
+    left: 10px;
+    height: 30px;
+    width: 30px;
+    transition: all .33s;
+}
+
+.link-icon img{
+    width: 100%;
+    height: 100%;
+}
+
+.link-text {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 10px;
+    height: 30px;
+    width: 75px;
+    transition: all .33s;
+}
+
+.link:hover {
+    scale:1.2;
+    cursor: pointer;
+}
+
+.link-divider {
+    display: flex;
+    background: #d9a254;
+    height: 2px;
+    width: 30%;
+    border-radius: 10px;
+    opacity: .8;
+    transition: all .33s;
+}
